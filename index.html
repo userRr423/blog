@@ -21,8 +21,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,600;1,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-    <link rel='stylesheet' href='style.css'>
-    <link rel="stylesheet" href="slider.css">
+    <link rel='stylesheet' href='./css/style.css'>
+    <link rel="stylesheet" href="./css/slider.css">
 </head>
 
 <body>
@@ -58,25 +58,32 @@
                 <div class='header-line'>
 
                     <nav class="nav">
-                        <a href="@"><img class="img-house" src="house.png" width="30" height="30"></a>
+                        <a href="@"><img class="img-house" src="./images/house.png" width="30" height="30"></a>
                         <div class="item-container">
                             <a class="nav-item" href="@">Обо мне</a>
                             <a class="nav-item" href="@">Контакты</a>
                             <a class="nav-item" href="@">Мои проекты</a>
-                            <a class="nav-item" href="@">Статьи</a>
-
-
                         </div>
+
+                        <div class="dropdown">
+                            <div class="dropbtn"> Выпадающий </div>
+                            <div class="dropdown-content">
+                                <a href="#">Ссылка 1</a>
+                                <a href="#">Ссылка 2</a>
+                                <a href="#">Ссылка 3</a>
+                            </div>
+                        </div>
+                        
                     </nav>
 
                     <div class="search-container">
-                        <img class="img-search" src="lupa.png" width="20" height="20">
+                        <img class="img-search" src="./images/lupa.png" width="20" height="20">
                         <form>
                             <input type="text" onkeyup="showHint(this.value)">
                         </form>
                     </div>
 
-                    <a href="@"><img class="img-burger-menu" src="burgerMenuW.png" width="30" height="30"></a>
+                    <a href="@"><img class="img-burger-menu" src="./images/burgerMenuW.png" width="30" height="30"></a>
 
                 </div>
             </div>
@@ -101,7 +108,8 @@
                         <div class="article-container">
                             <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
                             <div class="article">
-                                <p class="article-title"><a class="article-refer" href="@"><b>Cоздание переменных</b></a></p> <br>
+                                <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
+                                            переменных</b></a></p> <br>
                                 Категория: Python<br>
                                 Описание:<br>
                                 Привет мужичок я боровиче как дела привет я спою для тебя
@@ -111,7 +119,8 @@
                         <div class="article-container">
                             <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
                             <div class="article">
-                                <p class="article-title"><a class="article-refer" href="@"><b>Cоздание переменных</b></a></p> <br>
+                                <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
+                                            переменных</b></a></p> <br>
                                 Категория: Python<br>
                                 Описание:<br>
                                 Привет мужичок я боровиче как дела привет я спою для тебя
@@ -121,18 +130,21 @@
                         <div class="article-container">
                             <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
                             <div class="article">
-                                <p class="article-title"><a class="article-refer" href="@"><b>Cоздание переменных</b></a></p> <br>
+                                <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
+                                            переменных</b></a></p> <br>
                                 Категория: Python<br>
                                 Описание:<br>
                                 Привет мужичок я боровиче как дела привет я спою для тебя
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
                 <div class="side-bar">
-                        <center><h1 class="side-bar-title">Новости</h1></center>
+                    <center>
+                        <h1 class="side-bar-title">Новости</h1>
+                    </center>
                 </div>
             </div>
         </div>
@@ -146,9 +158,9 @@
         </div>
     </div>
 
-    <script src="./slider.js"></script>
+    <script src="./js/slider.js"></script>
 
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 
