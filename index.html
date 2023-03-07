@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Главная страница</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https: //fonts.googleapis.com/css2?family= Open family= Open+Sans:ital,wght@0,500;0,800;1,600;1,700 & display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https: //fonts.googleapis.com/css2?family= Open + Sans:ital,wght@0,500;0,800;1,600;1,700 &семья = Тинос: Италия, вес @ 0,400; 0,700; 1,400 & display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,600;1,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <canvas id="Matrix"></canvas>
+
+        <div class="css-3d-text">
+            Блог <br> программиста
+        </div>
+
+        <div class='header'>
+
+            <form class="login-form" method="post">
+                Логин:&nbsp;&nbsp; <input class="login-input" type="text" name="login"> <samp
+                    style="color:rgb(253, 253, 253)"></samp>
+                Пароль: <input class="login-input" type="password" name="pass"><samp
+                    style="color:rgb(255, 254, 254)"></samp>
+                <div class="checkbox-container">
+                    <input class="checkbox-input" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label class="checkLabel" for="vehicle1">Запомнить меня</label><br>
+                </div>
+
+                <div class="button-container">
+                    <input class="login-button" type="submit" value="Войти" name="go">
+                    <button class="button-registation"><b>Регистрация</b></button>
+                </div>
+            </form>
+
+            <div class="container">
+
+
+                <div class='header-line'>
+
+                    <nav class="nav">
+                        <a href="@"><img class="img-house" src="house.png" width="30" height="30"></a>
+                        <div class="item-container">
+                            <a class="nav-item" href="@">Обо мне</a>
+                            <a class="nav-item" href="@">Контакты</a>
+                            <a class="nav-item" href="@">Мои проекты</a>
+                            <a class="nav-item" href="@">Статьи</a>
+
+
+                        </div>
+                    </nav>
+
+                    <div class="search-container">
+                        <img class="img-search" src="lupa.png" width="20" height="20">
+                        <form>
+                            <input type="text" onkeyup="showHint(this.value)">
+                        </form>
+                    </div>
+
+                    <a href="@"><img class="img-burger-menu" src="burgerMenuW.png" width="30" height="30"></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container-content">
+                <div class="main-content">
+                    <div class="slider">
+                        <div class="slider-line">
+                            <img src="./images/css3.png" alt="">
+                            <img src="./images/javascript.png" alt="">
+                            <img src="./images/linux.png" alt="">
+                            <img src="./images/git.png" alt="">
+                            <img src="./images/csharp.png" alt="">
+                            <img src="./images/cplusplus.png" alt="">
+                            <img src="./images/php.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="side-bar">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="footer-text">
+                Copyring 2022
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./slider.js"></script>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>

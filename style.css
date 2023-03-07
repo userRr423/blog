@@ -1,0 +1,297 @@
+
+
+body {
+    margin: 0;
+    z-index: 0;
+    font-family: 'Tinos', serif;
+}
+
+
+.css-3d-text {
+    margin-left: 20px;
+    font-size: 48px;
+    color: #18a114;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(14,151,10),
+                 1px 1px 0 rgb(3,140,0),
+                 2px 2px 0 rgb(-7,130,0),
+                 3px 3px 0 rgb(-18,119,0),
+                 4px 4px 0 rgb(-28,109,0),
+                 5px 5px 0 rgb(-39,98,0),
+                 6px 6px 0 rgb(-49,88,0),
+                 7px 7px 0 rgb(-60,77,0),
+                 8px 8px 0 rgb(-70,67,0),
+                 9px 9px 0 rgb(-81,56,0),
+                 10px 10px 0 rgb(-91,46,0),
+                 11px 11px  0 rgb(-101,36,0),
+                 12px 12px 11px rgba(0,0,0,0.83),
+                 12px 12px 1px rgba(0,0,0,0.5),
+                 0px 0px 11px rgba(0,0,0,.2);
+ }
+
+.wrapper {
+    
+}
+
+.button-container {
+    display: flex;
+}
+
+.button-registation {
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    background-color: rgb(75, 129, 216);
+    color: aliceblue;
+}
+
+.button-registation:hover {
+    background-color: rgb(49, 49, 203);
+}
+
+.login-form {
+    position: absolute;
+    width: 230px;
+    background-color:rgba(0,0,0,0.8);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    right: 5px;
+    top: 0;
+    border-radius: 10px;
+}
+
+.checkLabel {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.login-input {
+    display: block;
+    border-radius: 30px;
+    width: 200px;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.login-button {
+    
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    background-color: #18a114;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: rgb(51, 255, 0);
+}
+
+.checkbox-input {
+    width: 20px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.0);
+}
+
+.checkbox-container
+{
+    margin: 0;
+}
+
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    background-size: cover;
+    min-height: 100vh;
+    filter: blur(2px);
+}
+
+.header {
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+.container {
+    display: flex;
+    margin-top: 15%;
+}
+
+.header-line {
+    display: flex;
+    position: relative;
+    background-color:rgba(0,0,0,0.8);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.nav-item {
+    position: relative;
+    margin-right: 20px;
+    font-size: 20px;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Tinos', serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nav-item:hover {
+    text-decoration: solid underline rgb(255, 255, 255) 2px;
+    text-decoration-skip-ink: none;
+}
+
+.item-container {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+.search-container {
+    display: flex;
+    position: absolute;
+    right: 50px;
+}
+
+form {
+    color:aliceblue;
+    margin-top: 8px;
+}
+
+input {
+    margin-left: 5px;
+    border-radius: 30px;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.img-search {
+    margin-top: 15px;
+}
+
+.img-house {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.img-burger-menu {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+    right: 15px;
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    
+}
+
+.btn {
+    display: none;
+    font-size: 20px;
+}
+
+.container-content {
+    display: flex;
+    margin-right: 8%;
+    margin-left: 8%;
+    margin-top: 2%;
+    
+    height: 1000px;
+}
+
+.main-content {
+    display: flex;
+    width: 76%;
+    height: 900px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+}
+
+.side-bar {
+    margin-left: 1%;
+    width: 23%;
+    height: 900px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+}
+
+
+.footer {
+    display: flex;
+    margin-right: 8%;
+    margin-left: 8%;
+    margin-top: -3%;
+    height: 240px;
+    background-color:rgba(0,0,0,0.8);
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.footer-text {
+    margin-left: 48%;
+    margin-top: 8%;
+}
+
+
+
+
+@media (max-width: 1000px)
+{
+    .container {
+        
+        margin-top: 31%;
+    }
+}
+
+@media (max-width: 640px)
+{
+    .container {
+        
+        margin-top: 38%;
+    }
+}
+
+@media (max-width: 1120px)
+{
+    .item-container {
+        display: none;
+    }
+
+    .search-container {
+        left: 23%;
+    }
+
+    .img-burger-menu {
+        display: inline;
+    }
+}
+
+@media (max-width: 685px)
+{
+    .css-3d-text  {
+        font-size: 38px;
+    }
+
+}
+
+
+
+
+
+ 
