@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0;
     z-index: 0;
@@ -12,26 +10,24 @@ body {
     font-size: 48px;
     color: #18a114;
     font-family: "Arial Black", Gadget, sans-serif;
-    text-shadow: 0px 0px 0 rgb(14,151,10),
-                 1px 1px 0 rgb(3,140,0),
-                 2px 2px 0 rgb(-7,130,0),
-                 3px 3px 0 rgb(-18,119,0),
-                 4px 4px 0 rgb(-28,109,0),
-                 5px 5px 0 rgb(-39,98,0),
-                 6px 6px 0 rgb(-49,88,0),
-                 7px 7px 0 rgb(-60,77,0),
-                 8px 8px 0 rgb(-70,67,0),
-                 9px 9px 0 rgb(-81,56,0),
-                 10px 10px 0 rgb(-91,46,0),
-                 11px 11px  0 rgb(-101,36,0),
-                 12px 12px 11px rgba(0,0,0,0.83),
-                 12px 12px 1px rgba(0,0,0,0.5),
-                 0px 0px 11px rgba(0,0,0,.2);
- }
-
-.wrapper {
-    
+    text-shadow: 0px 0px 0 rgb(14, 151, 10),
+        1px 1px 0 rgb(3, 140, 0),
+        2px 2px 0 rgb(-7, 130, 0),
+        3px 3px 0 rgb(-18, 119, 0),
+        4px 4px 0 rgb(-28, 109, 0),
+        5px 5px 0 rgb(-39, 98, 0),
+        6px 6px 0 rgb(-49, 88, 0),
+        7px 7px 0 rgb(-60, 77, 0),
+        8px 8px 0 rgb(-70, 67, 0),
+        9px 9px 0 rgb(-81, 56, 0),
+        10px 10px 0 rgb(-91, 46, 0),
+        11px 11px 0 rgb(-101, 36, 0),
+        12px 12px 11px rgba(0, 0, 0, 0.83),
+        12px 12px 1px rgba(0, 0, 0, 0.5),
+        0px 0px 11px rgba(0, 0, 0, .2);
 }
+
+.wrapper {}
 
 .button-container {
     display: flex;
@@ -52,7 +48,7 @@ body {
 .login-form {
     position: absolute;
     width: 230px;
-    background-color:rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     padding-left: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -76,7 +72,7 @@ body {
 }
 
 .login-button {
-    
+
     border-radius: 10px;
     width: 100px;
     height: 25px;
@@ -97,8 +93,7 @@ input[type=checkbox] {
     transform: scale(1.0);
 }
 
-.checkbox-container
-{
+.checkbox-container {
     margin: 0;
 }
 
@@ -130,7 +125,7 @@ canvas {
 .header-line {
     display: flex;
     position: relative;
-    background-color:rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 50px;
     border-radius: 10px;
@@ -166,7 +161,7 @@ canvas {
 }
 
 form {
-    color:aliceblue;
+    color: aliceblue;
     margin-top: 8px;
 }
 
@@ -198,7 +193,7 @@ input {
 .nav {
     display: flex;
     position: relative;
-    
+
 }
 
 .btn {
@@ -211,12 +206,10 @@ input {
     margin-right: 8%;
     margin-left: 8%;
     margin-top: 2%;
-    
-}
-
-.main {
 
 }
+
+.main {}
 
 .main-content {
     display: flex;
@@ -233,17 +226,20 @@ input {
     margin-right: 20px;
     background-color: #b2b2b2;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .img-article {
     margin-top: 10%;
 }
+
 .article-container {
     display: flex;
     width: 400px;
     height: 200px;
     margin: 10px;
 }
+
 .article {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -251,9 +247,19 @@ input {
 }
 
 .article-title {
-    color: #070006;
     font-size: 1.5vw;
     margin-bottom: -10px;
+}
+
+.article-refer {
+    text-decoration: none;
+    font-family: 'Tinos', serif;
+    color: #070006;
+}
+
+.article-refer:hover {
+    text-decoration: solid underline rgb(7, 7, 7) 2px;
+    text-decoration-skip-ink: none;
 }
 
 .side-bar {
@@ -266,6 +272,26 @@ input {
 
 .side-bar-title {
     font-size: 2vw;
+    color: rgb(245, 245, 245);
+    text-shadow: 0 -1px rgb(0 0 0 / 10%);
+    animation: light 1.2s linear infinite;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.side-bar-title {
+    color: rgb(245, 245, 245);
+    text-shadow: 0 -1px rgba(0, 0, 0, .1);
+    animation: light 1.2s linear infinite;
+}
+
+@keyframes light {
+
+    50% {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
+    }
 
 }
 
@@ -276,7 +302,7 @@ input {
     margin-left: 8%;
     margin-top: 3%;
     height: 240px;
-    background-color:rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     color: aliceblue;
 }
@@ -289,24 +315,21 @@ input {
 
 
 
-@media (max-width: 1000px)
-{
+@media (max-width: 1000px) {
     .container {
-        
+
         margin-top: 31%;
     }
 }
 
-@media (max-width: 640px)
-{
+@media (max-width: 640px) {
     .container {
-        
+
         margin-top: 38%;
     }
 }
 
-@media (max-width: 1120px)
-{
+@media (max-width: 1120px) {
     .item-container {
         display: none;
     }
@@ -320,16 +343,8 @@ input {
     }
 }
 
-@media (max-width: 685px)
-{
-    .css-3d-text  {
+@media (max-width: 685px) {
+    .css-3d-text {
         font-size: 38px;
     }
-
 }
-
-
-
-
-
- 
