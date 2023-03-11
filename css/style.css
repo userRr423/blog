@@ -208,6 +208,10 @@ input {
 
 .main {}
 
+.title-new-articles2 {
+    margin-top: -90px;
+}
+
 
 
 .main-content {
@@ -445,4 +449,14 @@ input {
     transform: translateY(-34px) rotate(270deg);
    
     margin-top: 0px;
+}
+
+.font-input {
+    font-weight: bold;
+    font-size: 2.7vh;
+}
+
+.font-input-login {
+    font-weight: bold;
+    font-size: 2.0vh;
 }
