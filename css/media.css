@@ -1,0 +1,40 @@
+@media (max-width: 1000px) {
+    .container {
+        margin-top: 31%;
+    }
+
+    .tegs  li {
+        padding-left: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+
+        margin-top: 38%;
+    }
+}
+
+@media (max-width: 1176px) {
+    .item-container {
+        display: none;
+    }
+
+    .search-container {
+        left: 23%;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}
+
+@media (max-width: 685px) {
+    .css-3d-text {
+        font-size: 38px;
+    }
+}
