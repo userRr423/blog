@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,20 +11,14 @@
     <title>Главная страница</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https: //fonts.googleapis.com/css2?family= Open family= Open+Sans:ital,wght@0,500;0,800;1,600;1,700 & display=swap"
-        rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2?family= Open family= Open+Sans:ital,wght@0,500;0,800;1,600;1,700 & display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https: //fonts.googleapis.com/css2?family= Open + Sans:ital,wght@0,500;0,800;1,600;1,700 &семья = Тинос: Италия, вес @ 0,400; 0,700; 1,400 & display=swap"
-        rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2?family= Open + Sans:ital,wght@0,500;0,800;1,600;1,700 &семья = Тинос: Италия, вес @ 0,400; 0,700; 1,400 & display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,600;1,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,600;1,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='./css/style.css'>
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/dropContent.css">
@@ -28,6 +26,37 @@
 </head>
 
 <body>
+
+    <?php
+    require "./php/db.php";
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $result = mysqli_query($con, "SELECT `open`, `login` FROM `remember_device` WHERE `ip` = '" . $ip . "'");
+
+    $open;
+    $loginName;
+    while (($o = mysqli_fetch_assoc($result))) {
+        $open = $o['open'];
+        $loginName = $o['login'];
+    }
+
+    if ($open == 1) {
+        echo "Да $loginName";
+        $_SESSION['online'] = 1;
+        $_SESSION['loginName'] = $loginName;
+    } else {
+        echo "нет";
+    }
+    echo "<br>";
+
+    if (isset($_SESSION['online'])) {
+
+        echo "<br>вы в системе<br>";
+    } else {
+        echo "<br>вы еще не вошли в систему";
+    }
+
+    ?>
 
     <div class="wrapper">
         <canvas id="Matrix"></canvas>
@@ -38,30 +67,46 @@
 
         <div class='header'>
 
-            <!--
-            <form class="login-form" method="post">
+            <?php
+
+            if ($_SESSION['online'] == 1 || $open == 1) {
+                echo '
+                <div class="login-container">
+                <img src="./images/log.png" alt="", width="40" height="40">
+                <div class="log">
+                    ' . $_SESSION['loginName'] . '
+                </div>
+                </div>
+                ';
+            } else {
+                echo '
+                
+                <form action="./php/login.php" class="login-form" method="post">
                 Логин:&nbsp;&nbsp; <input class="login-input font-input-login" type="text" name="login"> <samp
                     style="color:rgb(253, 253, 253)"></samp>
                 Пароль: <input class="login-input font-input-login" type="password" name="pass"><samp
                     style="color:rgb(255, 254, 254)"></samp>
                 <div class="checkbox-container">
-                    <input class="checkbox-input" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <input class="checkbox-input" type="checkbox" id="vehicle1" name="remember" value="Yes">
                     <label class="checkLabel" for="vehicle1">Запомнить меня</label><br>
                 </div>
 
                 <div class="button-container">
-                    <input class="login-button" type="submit" value="Войти" name="go">
+                    <input class="login-button" type="submit" name="doGo">
                     <button class="button-registation"><a class="reg" href="./pages/registration.html">Регистрация</a></button>
                 </div>
             </form>
-            -->
+                
+                ';
+            }
 
-            <div class="login-container">
-                <img src="./images/log.png" alt="", width="40" height="40">
-                <div class="log">
-                    Jonny223
-                </div>
-            </div>
+            ?>
+
+
+
+            <!--
+            
+            -->
 
             <div class="container">
 
@@ -164,7 +209,8 @@
                                 но неопровержимые выводы, а также базовые сценарии поведения пользователей представляют
                                 собой не что иное,
                                 как квинтэссенцию победы маркетинга <br>над разумом и должны быть объединены в целые
-                                кластеры себе подобных.</p>
+                                кластеры себе подобных.
+                            </p>
                         </div>
 
                         <div class="title-new-articles1">
