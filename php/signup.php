@@ -34,7 +34,7 @@
             $error = 'Введите login';
         }
 
-        $login = $_REQUEST['login'];
+        $login = htmlspecialchars($_REQUEST['login']);
         $checkLogin = mysqli_query($con, "SELECT `login` FROM `user` WHERE `login` = '" . $login . "'");
         if ($checkLogin) {
             if (mysqli_num_rows($checkLogin) > 0) {
@@ -42,7 +42,7 @@
             }
         }
 
-        $email = $_REQUEST['email'];
+        $email = htmlspecialchars($_REQUEST['email']);
         $checkEmail = mysqli_query($con, "SELECT `email` FROM `user` WHERE `email` = '" . $email . "'");
 
         if ($checkEmail) {
@@ -54,10 +54,10 @@
 
         // Если ошибок нет, то происходит регистрация 
         if ($error == "") {
-            $login = $_REQUEST['login'];
-            $email = $_REQUEST['email'];
+            $login = htmlspecialchars($_REQUEST['login']);
+            $email = htmlspecialchars($_REQUEST['email']);
             // Пароль хешируется
-            $pass = password_hash($_REQUEST['pass'], PASSWORD_DEFAULT);
+            $pass = password_hash(htmlspecialchars($_REQUEST['pass']), PASSWORD_DEFAULT);
             // хешируем хеш, который состоит из логина и времени
             $hash = md5($login . time());
 

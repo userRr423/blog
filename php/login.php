@@ -21,11 +21,11 @@
         // Если ошибок нет, то происходит регистрация 
 
         if ($error == "") {
-            $login = $_REQUEST['login'];
+            $login = htmlspecialchars($_REQUEST['login']); 
             $checkLogin = mysqli_query($con, "SELECT `login` FROM `user` WHERE `login` = '" . $login . "'");
 
             if (mysqli_num_rows($checkLogin) > 0) {
-                $pass = $_REQUEST['pass'];
+                $pass = htmlspecialchars($_REQUEST['pass']);
                 $checkPass = mysqli_query($con, "SELECT `password` FROM `user` WHERE `login` = '" . $login . "'");
                 $getHash = mysqli_fetch_assoc($checkPass);
                 $hesh = $getHash['password'];
@@ -40,7 +40,7 @@
                         $_POST['remember'] == 'Yes'
                     ) {
 
-                        $login = $_REQUEST['login'];
+                        $login = htmlspecialchars($_REQUEST['login']);
                         $checkLogin = mysqli_query($con, "SELECT `login` FROM `remember_device` WHERE `login` = '" . $login . "'");
                         if ($checkLogin) {
                             $ip = $_SERVER['REMOTE_ADDR'];
