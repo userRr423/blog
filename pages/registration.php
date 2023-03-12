@@ -28,8 +28,6 @@
 
 
     <style>
-        body {}
-
         .registration-container {
             display: flex;
             margin-left: 30%;
@@ -200,13 +198,13 @@
                     </li>
                 </ul>
             </div>
-            <form action="" method="post">
+            <form action="../php/signup.php" method="post">
                 <input class="font-input" type="text" name="login">
                 <input class="font-input" type="email" name="email">
                 <input class="font-input" type="password" name="pass">
                 <input class="font-input" type="password" name="pass_rep">
-                <input id="changeCheckBox" type="checkbox" name="formWheelchair" value="Yes" />
-                <input id="changeSubmit" type="submit" value="Зарегистрироваться" name="doGo">
+                <input id="changeCheckBox" type="checkbox" name="remember" value="Yes" />
+                <input id="changeSubmit" type="submit"  name="doGoR">
             </form>
         </div>
 

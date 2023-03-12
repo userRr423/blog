@@ -33,7 +33,7 @@ session_start();
     $ip = $_SERVER['REMOTE_ADDR'];
     $result = mysqli_query($con, "SELECT `open`, `login` FROM `remember_device` WHERE `ip` = '" . $ip . "'");
 
-    $open;
+    $open = 0;
     $loginName;
     while (($o = mysqli_fetch_assoc($result))) {
         $open = $o['open'];
@@ -44,18 +44,7 @@ session_start();
         echo "Да $loginName";
         $_SESSION['online'] = 1;
         $_SESSION['loginName'] = $loginName;
-    } else {
-        echo "нет";
-    }
-    echo "<br>";
-
-    if (isset($_SESSION['online'])) {
-
-        echo "<br>вы в системе<br>";
-    } else {
-        echo "<br>вы еще не вошли в систему";
-    }
-
+    } 
     ?>
 
     <div class="wrapper">
@@ -69,7 +58,7 @@ session_start();
 
             <?php
 
-            if ($_SESSION['online'] == 1 || $open == 1) {
+            if ($open == 1 || $_SESSION['online'] = 1) {
                 echo '
                 <div class="login-container">
                 <img src="./images/log.png" alt="", width="40" height="40">
@@ -93,7 +82,7 @@ session_start();
 
                 <div class="button-container">
                     <input class="login-button" type="submit" name="doGo">
-                    <button class="button-registation"><a class="reg" href="./pages/registration.html">Регистрация</a></button>
+                    <button class="button-registation"><a class="reg" href="./pages/registration.php">Регистрация</a></button>
                 </div>
             </form>
                 
@@ -114,7 +103,7 @@ session_start();
                 <div class='header-line'>
 
                     <nav class="nav">
-                        <a href="./index.html"><img class="img-house" src="./images/house.png" width="30" height="30"></a>
+                        <a href="./index.php"><img class="img-house" src="./images/house.png" width="30" height="30"></a>
                         <div class="item-container">
                             <a class="nav-item" href="@">Обо мне</a>
                             <a class="nav-item" href="@">Контакты</a>
@@ -128,7 +117,7 @@ session_start();
                                 <a href="#">C++</a>
                                 <a href="#">Pyrhon</a>
                                 <a href="#">Php</a>
-                                <a href="./pages/articles.html">Все статьи</a>
+                                <a href="./pages/articles.php">Все статьи</a>
                             </div>
                         </div>
 
@@ -161,7 +150,7 @@ session_start();
                         <a href="#">С++</a>
                         <a href="#">Python</a>
                         <a href="#">Php</a>
-                        <a href="articles.html">Все статьи</a>
+                        <a href="./pages/articles.php">Все статьи</a>
                     </div>
                 </div>
             </div>
