@@ -7,7 +7,7 @@ require_once 'db.php';
 
 // Проверка есть ли хеш
 if ($_GET['hash']) {
-    $hash = $_GET['hash'];
+    $hash = htmlentities($_GET['hash']);
     // Получаем id и подтверждено ли Email
     if ($result = mysqli_query($con, "SELECT `id`, `email_confirmed`, `login` FROM `user` WHERE `hash`='" . $hash . "'")) {
         while( $row = mysqli_fetch_assoc($result) ) { 

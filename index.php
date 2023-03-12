@@ -41,10 +41,14 @@ session_start();
     }
 
     if ($open == 1) {
-        echo "Да $loginName";
         $_SESSION['online'] = 1;
         $_SESSION['loginName'] = $loginName;
     } 
+
+    if(!isset($_SESSION['online']))
+    {
+        $_SESSION['online'] = 0;
+    }
     ?>
 
     <div class="wrapper">
@@ -58,12 +62,17 @@ session_start();
 
             <?php
 
-            if ($open == 1 || $_SESSION['online'] = 1) {
+            if ($open == 1 || $_SESSION['online'] == 1) {
                 echo '
                 <div class="login-container">
-                <img src="./images/log.png" alt="", width="40" height="40">
+                <di class="log-img">
+                    <img src="./images/log.png" alt="", width="40" height="40">
+                </di>
                 <div class="log">
                     ' . $_SESSION['loginName'] . '
+                </div>
+                <div class="exit">
+                    <a href="./php/exit.php"><img src="./images/exit.png" alt="", width="30" height="30"></a>
                 </div>
                 </div>
                 ';
@@ -90,8 +99,6 @@ session_start();
             }
 
             ?>
-
-
 
             <!--
             

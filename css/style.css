@@ -485,3 +485,12 @@ input {
     margin-right: 10px;
     margin-top: 10px;
 }
+
+.exit {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.log-img {
+    margin-left: 5px;
+}

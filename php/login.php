@@ -46,7 +46,13 @@
                             $ip = $_SERVER['REMOTE_ADDR'];
 
                             if (mysqli_num_rows($checkLogin) > 0) {
-                                $result = mysqli_query($con, "UPDATE `remember_device` SET `open` = 1  WHERE `login` = '$login' AND `ip` = '$ip' ");
+                                $sql = "INSERT INTO `remember_device` (`login`, `ip`, `open`) VALUES ('$login', '$ip', b'1')";
+                                if (mysqli_query($con, $sql)) {
+                                    echo "Мы вас запомнили<br>";
+                                    echo "Данные успешно добавлены";
+                                } else {
+                                    echo "Ошибка: " . mysqli_error($conn);
+                                }
                             } else {
                                 
                                 $sql = "INSERT INTO `remember_device` (`login`, `ip`, `open`) VALUES ('$login', '$ip', b'1')";
