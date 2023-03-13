@@ -6,6 +6,9 @@ echo "Спасибо за регистрацию!";
 require_once 'db.php';
 
 // Проверка есть ли хеш
+
+$remeber = $_GET['rememberR'];
+
 if ($_GET['hash']) {
     $hash = htmlentities($_GET['hash']);
     // Получаем id и подтверждено ли Email
@@ -20,6 +23,19 @@ if ($_GET['hash']) {
                 session_start();
                 $_SESSION['online'] = 1;
                 $_SESSION['loginName'] = $row['login'];
+
+                if($remeber == 1)
+                {
+                    $ip = $_SERVER['REMOTE_ADDR'];
+                    $login = $row['login'];
+                    $sql = "INSERT INTO `remember_device` (`login`, `ip`, `open`) VALUES ('$login', '$ip', b'1')";
+                                if (mysqli_query($con, $sql)) {
+                                    echo "Мы вас запомнили<br>";
+                                    echo "Данные успешно добавлены";
+                                } else {
+                                    echo "Ошибка: " . mysqli_error($conn);
+                                }
+                }
                 
             } else {
                 echo "Что то пошло не так";

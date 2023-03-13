@@ -67,6 +67,11 @@
             $headers .= "To: <$email>\r\n";
             $headers .= "From: <misterinkognito67@gmail.com>\r\n";
             // Сообщение для Email
+            $rememberRegistration = 0;
+            if (isset($_POST['remember']) && $_POST['remember'] == 'Yes') 
+            {
+                $rememberRegistration = 1;
+            }
             
             $message = '
                 <html>
@@ -74,7 +79,7 @@
                 <title>Подтвердите Email</title>
                 </head>
                 <body>
-                <p>Что бы подтвердить Email, перейдите по <a href="http://blog/php/finalRegistation.php?hash=' . $hash . '">ссылка</a></p>
+                <p>Что бы подтвердить Email, перейдите по <a href="http://blog/php/finalRegistation.php?hash=' . $hash . '&rememberR=' . $rememberRegistration . '">ссылка</a></p>
                 </body>
                 </html>
                 ';
