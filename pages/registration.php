@@ -7,20 +7,14 @@
     <title>Регистрация</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https: //fonts.googleapis.com/css2?family= Open family= Open+Sans:ital,wght@0,500;0,800;1,600;1,700 & display=swap"
-        rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2?family= Open family= Open+Sans:ital,wght@0,500;0,800;1,600;1,700 & display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https: //fonts.googleapis.com/css2?family= Open + Sans:ital,wght@0,500;0,800;1,600;1,700 &семья = Тинос: Италия, вес @ 0,400; 0,700; 1,400 & display=swap"
-        rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2?family= Open + Sans:ital,wght@0,500;0,800;1,600;1,700 &семья = Тинос: Италия, вес @ 0,400; 0,700; 1,400 & display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,600;1,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,600;1,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='../css/style.css'>
     <link rel="stylesheet" href="../css/slider.css">
     <link rel="stylesheet" href="../css/dropContent.css">
@@ -29,23 +23,25 @@
 
     <style>
         .registration-container {
+            position: fixed;
             display: flex;
-            margin-left: 30%;
+            margin-left: 25%;
             margin-top: 5%;
             background-color: rgba(0, 0, 0, 0.8);
-            width: 40%;
-            height: 24%;
+
             padding: 10px;
             font-weight: bold;
             font-size: 20px;
+
         }
 
         .registration-container input {
             float: right;
+            margin-top: 10px;
             margin-bottom: 20px;
             margin-left: 5px;
             border-radius: 30px;
-            width: 90%;
+            width: 300px;
             height: 30px;
             background-color: rgb(255, 255, 255);
         }
@@ -54,6 +50,7 @@
             display: flex;
             flex-direction: column;
             width: 90%;
+            height: 90%;
         }
 
         samp {
@@ -66,16 +63,15 @@
             color: rgb(223, 212, 212);
         }
 
-        
+
 
         .email {
             background: url(../images/email.png) no-repeat;
         }
 
         #changeLi {
-            position: absolute;
-            transform: translate(185px, -35px);
-            font-size: 2.5vh;
+            margin-top: 20px;
+            margin-left: -30px;
         }
 
         #changeSubmit {
@@ -83,7 +79,9 @@
             margin-bottom: 0;
             border-radius: 5px;
             font-weight: bold;
-            font-size: 2.7vh;
+            font-size: 2.2vh;
+            transform: translate(0, 40px);
+
         }
 
         #changeSubmit:hover {
@@ -92,13 +90,13 @@
 
         #changeCheckBox {
 
-            transform: translate(100px, 0px);
-            font-size: 2.5;
+            transform: scale(1.5);
+            margin-bottom: 0px;
         }
 
         .reg-text ul {
             margin-top: -10px;
-          
+
         }
 
         .reg-text li {
@@ -108,9 +106,9 @@
             /* Параметры фона */
             background-size: 22%;
             padding-top: 6px;
-            padding-left: 44px;
-            margin-bottom: 24px;  
-             
+            padding-left: 74px;
+            margin-bottom: 24px;
+
             font-weight: bold;
             font-size: 3.5vh;
             list-style: none;
@@ -133,31 +131,35 @@
             transform: translate(-30px, 0);
         }
 
-        
-
-
-        @media (max-width: 1200px) {
-            #changeLi {
-                transform: translate(145px, -35px);
-            }
-
-            #changeCheckBox {
-
-                transform: translate(30px, 0px);
-            }
-
-            .registration-container {
-                margin-left: 20%;
-                margin-top: 5%;
-                background-color: rgba(0, 0, 0, 0.8);
-                width: 60%;
-            }
+        .wrapper {
+            margin: 0;
         }
 
 
-        @media (max-width: 870px) {
-            #changeLi {
-                transform: translate(65px, -35px);
+
+
+        @media (max-width: 1200px) {
+            .registration-container {
+                margin-left: 15%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .registration-container {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .registration-container {
+                transform: scale(0.7);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .registration-container {
+                margin-left: -90px;
+                transform: scale(0.6);
             }
 
         }
@@ -204,7 +206,7 @@
                 <input class="font-input" type="password" name="pass">
                 <input class="font-input" type="password" name="pass_rep">
                 <input id="changeCheckBox" type="checkbox" name="remember" value="Yes" />
-                <input id="changeSubmit" type="submit"  name="doGoR">
+                <input id="changeSubmit" type="submit" name="doGoR">
             </form>
         </div>
 

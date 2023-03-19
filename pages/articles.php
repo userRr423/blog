@@ -46,6 +46,11 @@ session_start();
         $_SESSION['online'] = 1;
         $_SESSION['loginName'] = $loginName;
     }
+
+    if(!isset($_SESSION['online']))
+    {
+        $_SESSION['online'] = 0;
+    }
     ?>
 
     <div class="wrapper">
@@ -62,16 +67,21 @@ session_start();
             if ($_SESSION['online'] == 1 || $open == 1) {
                 echo '
                 <div class="login-container">
-                <img src="../images/log.png" alt="", width="40" height="40">
+                <di class="log-img">
+                    <img src="../images/log.png" alt="", width="40" height="40">
+                </di>
                 <div class="log">
                     ' . $_SESSION['loginName'] . '
+                </div>
+                <div class="exit">
+                    <a href="../php/exit.php"><img src="../images/exit.png" alt="", width="30" height="30"></a>
                 </div>
                 </div>
                 ';
             } else {
                 echo '
                 
-                <form action="./php/login.php" class="login-form" method="post">
+                <form action="../php/login.php" class="login-form" method="post">
                 Логин:&nbsp;&nbsp; <input class="login-input font-input-login" type="text" name="login"> <samp
                     style="color:rgb(253, 253, 253)"></samp>
                 Пароль: <input class="login-input font-input-login" type="password" name="pass"><samp

@@ -182,7 +182,7 @@ session_start();
                     <div class="main-container">
                         <div class="greetings-text">
                             <center>
-                                <h1>Приветствую вас на своем сайте!</h1>
+                                <h1>Приветствую вас на своем сайте!!!</h1>
                             </center>
                             <p>Но ключевые особенности структуры проекта являются только методом политического участия и
                                 смешаны с не
@@ -219,8 +219,8 @@ session_start();
                             <div class="article-container">
                                 <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
-                                                переменных</b></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
+                                                переменных</b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
                                         1004
@@ -235,10 +235,10 @@ session_start();
 
 
                             <div class="article-container">
-                                <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
+                                <img class="img-article" src="./images/php.png" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
-                                                переменных</b></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
+                                                переменных</b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
                                         1004
@@ -252,10 +252,10 @@ session_start();
                             </div>
 
                             <div class="article-container">
-                                <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
+                                <img class="img-article" src="./images/git.png" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
-                                                переменных</b></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
+                                                переменных</b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
                                         1004
@@ -279,10 +279,10 @@ session_start();
                         <div class="articles-container">
 
                             <div class="article-container">
-                                <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
+                                <img class="img-article" src="./images/linux.png" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
-                                                переменных</b></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
+                                                переменных</b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
                                         1004
@@ -297,10 +297,10 @@ session_start();
 
 
                             <div class="article-container">
-                                <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
+                                <img class="img-article" src="./images/cplusplus.png" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
-                                                переменных</b></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
+                                                переменных</b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
                                         1004
@@ -314,10 +314,10 @@ session_start();
                             </div>
 
                             <div class="article-container">
-                                <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
+                                <img class="img-article" src="./images/css3.png" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><b>Cоздание
-                                                переменных</b></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
+                                                переменных</b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
                                         1004

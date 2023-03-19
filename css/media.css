@@ -39,3 +39,47 @@
     }
 }
 
+@media (max-width: 940px) {
+    .side-bar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .article-container {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .container-content {
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-top: 2%;
+    }
+
+    .header {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .main {
+        margin: 0;
+    }
+}
+
+@media (max-width: 509px) {
+    input {
+        margin-left: 0;
+        width: 250px;
+    }
+
+    .search-container{
+        left: 65px;
+    }
+}
+
+@media (max-width: 609px) {
+    
+}
