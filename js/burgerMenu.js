@@ -1,6 +1,7 @@
 const menu = document.getElementById('item-container-dropBurger');
 const burger = document.querySelector('.burger-btn');
 
+
 sw = true;
 menu.style.display = 'none';
 burger.addEventListener('click', () => {

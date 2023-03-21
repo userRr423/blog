@@ -1,4 +1,5 @@
 <?php
+require_once "./php/db.php";
 session_start();
 ?>
 
@@ -216,57 +217,57 @@ session_start();
                         </div>
                         <div class="articles-container">
 
+                            <?php 
+                            
+                            $articles = mysqli_query($con, "SELECT * FROM `articles`");
+                            $category_q = mysqli_query($con, "SELECT * FROM `articles_categories`");
+                            $category = array();
+
+                            while( $cat = mysqli_fetch_assoc($category_q))
+                            {
+                                $category[] = $cat;
+                            }
+
+                            ?>
+
+                            <?php
+
+                            while( $article = mysqli_fetch_assoc($articles))
+                            { 
+                                ?>
                             <div class="article-container">
-                                <img class="img-article" src="./images/csharp.png" alt="" width="150" height="150">
+                                <img class="img-article" src="<?php echo $article['image'] ?>" alt="" width="150" height="150">
                                 <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
-                                                переменных</b></h3></a></p> <br>
+                                    <p class="article-title"><a class="article-refer" href="@"><h3><b><?php echo $article['title'] ?></b></h3></a></p> <br>
                                     <div class="view-article">
                                         <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
-                                        1004
+                                        <?php echo $article['views'] ?>
                                     </div>
                                     <br>
                                     <br>
-                                    Категория: Python<br>
+                                    <?php
+                                    $art_cat = false;
+                                    foreach($category as $cat)
+                                    {
+                                        if($cat['id'] == $article['id'])
+                                        {
+                                            $art_cat = $cat;
+                                            break;
+                                        }
+                                    }
+                                    
+                                    ?>
+                                    Категория: <?php echo $art_cat['title'] ?><br>
                                     Описание:<br>
-                                    Привет мужичок я боровиче как дела привет я спою для тебя
+                                    <?php echo $article['text'] ?>
                                 </div>
                             </div>
 
+                            <?php }
 
-                            <div class="article-container">
-                                <img class="img-article" src="./images/php.png" alt="" width="150" height="150">
-                                <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
-                                                переменных</b></h3></a></p> <br>
-                                    <div class="view-article">
-                                        <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
-                                        1004
-                                    </div>
-                                    <br>
-                                    <br>
-                                    Категория: Python<br>
-                                    Описание:<br>
-                                    Привет мужичок я боровиче как дела привет я спою для тебя
-                                </div>
-                            </div>
+                            ?>
 
-                            <div class="article-container">
-                                <img class="img-article" src="./images/git.png" alt="" width="150" height="150">
-                                <div class="article">
-                                    <p class="article-title"><a class="article-refer" href="@"><h3><b>Cоздание
-                                                переменных</b></h3></a></p> <br>
-                                    <div class="view-article">
-                                        <img class="img-view" src="./images/viwes.png" alt="" width="20" height="20">
-                                        1004
-                                    </div>
-                                    <br>
-                                    <br>
-                                    Категория: Python<br>
-                                    Описание:<br>
-                                    Привет мужичок я боровиче как дела привет я спою для тебя
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <div class="title-new-articles2">
@@ -339,6 +340,10 @@ session_start();
                         <h1 class="side-bar-title">Новости</h1>
                     </center>
 
+                    
+                    <?php include "./parser.php" ?>
+                    
+                        
                     <center>
                         <h1 class="side-bar-title-teg">Теги</h1>
                     </center>
